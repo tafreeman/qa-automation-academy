@@ -1,13 +1,14 @@
-# Deploy docs-site to GitHub Pages via gh-pages branch.
+# Deploy docs-site to GitHub Pages via OIDC (actions/deploy-pages).
 #
 # Triggers on push to main when docs-site/ files change.
-# Uses peaceiris/actions-gh-pages@v3 to publish dist/ to the gh-pages branch.
+# Uses the same OIDC pattern as deploy-practice-app.yml to avoid
+# conflicting Pages sources (gh-pages branch vs. Actions artifact).
 #
 # GitHub Pages checklist:
-# ✅ base path matches repo name (/midnight-automation-voyage/)
+# ✅ base path matches repo name (/midnight-playwright-journey/)
 # ✅ 404 redirect handled (public/404.html with SPA redirect script)
-# ✅ gh-pages branch target set in workflow (publish_branch: gh-pages)
-# ✅ GITHUB_TOKEN permissions scoped (contents: write)
+# ✅ OIDC permissions scoped (pages: write, id-token: write)
+# ✅ Environment block wired to deployment URL
 # ✅ CNAME stub not needed (no custom domain configured)
 
 name: Deploy Docs Site
@@ -19,33 +20,48 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
   group: docs-deploy
   cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
       - name: Setup Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: pnpm
+          cache-dependency-path: docs-site/pnpm-lock.yaml
 
       - name: Install dependencies
-        run: cd docs-site && npm ci
+        run: cd docs-site && pnpm install --frozen-lockfile
 
       - name: Build
-        run: cd docs-site && npm run build
+        run: cd docs-site && pnpm run build
 
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
+      - uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs-site/dist
-          publish_branch: gh-pages
+          path: docs-site/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
