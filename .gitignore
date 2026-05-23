@@ -16,3 +16,8 @@ test-results/
 practice-app/playwright-report/index.html
 .vs/
 .generated/
+
+# Local AI / MCP config
+.claude/
+AGENTS.md
+.mcp.json
