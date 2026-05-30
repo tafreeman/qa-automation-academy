@@ -47,7 +47,7 @@ export default defineConfig({
       },
     ],
     /* Favicon */
-    ["link", { rel: "icon", type: "image/svg+xml", href: "/midnight-automation-voyage/favicon.svg" }],
+    ["link", { rel: "icon", type: "image/svg+xml", href: "/qa-automation-academy/favicon.svg" }],
   ],
 
   themeConfig: {
@@ -113,7 +113,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/tafreeman/midnight-automation-voyage" },
+      { icon: "github", link: "https://github.com/tafreeman/qa-automation-academy" },
     ],
 
     /* VitePress built-in local search */
@@ -128,7 +128,7 @@ export default defineConfig({
 
     editLink: {
       pattern:
-        "https://github.com/tafreeman/midnight-automation-voyage/edit/main/docs-site/:path",
+        "https://github.com/tafreeman/qa-automation-academy/edit/main/docs-site/:path",
       text: "Edit this page on GitHub",
     },
   },

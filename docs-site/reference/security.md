@@ -17,7 +17,7 @@ We take security seriously. If you discover a security vulnerability, please rep
 
 **DO NOT** open a public GitHub issue for security vulnerabilities.
 
-Instead, please email security concerns to: **[Create a private security advisory on GitHub](https://github.com/tafreeman/midnight-automation-voyage/security/advisories/new)**
+Instead, please email security concerns to: **[Create a private security advisory on GitHub](https://github.com/tafreeman/qa-automation-academy/security/advisories/new)**
 
 Or contact the maintainer directly at: `tafreeman [at] github`
 
@@ -135,7 +135,7 @@ We appreciate responsible disclosure and may publicly acknowledge reporters (wit
 
 For security-related questions that aren't vulnerabilities, you can:
 
-- [Open a discussion](https://github.com/tafreeman/midnight-automation-voyage/discussions)
+- [Open a discussion](https://github.com/tafreeman/qa-automation-academy/discussions)
 - Email general questions to the maintainer
 
 Thank you for helping keep Midnight Automation Voyage secure!

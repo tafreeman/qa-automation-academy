@@ -15,7 +15,7 @@ hero:
       link: /courses/
     - theme: alt
       text: View on GitHub
-      link: https://github.com/tafreeman/midnight-automation-voyage
+      link: https://github.com/tafreeman/qa-automation-academy
 
 features:
   - icon: 🎭
@@ -50,7 +50,7 @@ import CourseCard from './.vitepress/theme/components/CourseCard.vue'
   :modules="10"
   status="Complete"
   description="The recommended starting point. Each lesson builds on the previous — from watching a test run to building your own test pack."
-  link="/midnight-automation-voyage/courses/first-playwright-tests"
+  link="/qa-automation-academy/courses/first-playwright-tests"
   :moduleList="[
     'See a Test Do Real Work',
     'Just Enough TypeScript',
@@ -71,7 +71,7 @@ import CourseCard from './.vitepress/theme/components/CourseCard.vue'
   :modules="10"
   status="Complete"
   description="Master the prompt-driven workflow — learn to get useful test code from Copilot and refine it into reliable automation."
-  link="/midnight-automation-voyage/courses/copilot-first-testing"
+  link="/qa-automation-academy/courses/copilot-first-testing"
   :moduleList="[
     'How Automation Works',
     'Environment Setup',

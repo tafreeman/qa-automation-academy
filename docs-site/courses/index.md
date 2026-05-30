@@ -23,7 +23,7 @@ import CourseCard from '../.vitepress/theme/components/CourseCard.vue'
   :modules="10"
   status="✅ Complete"
   description="The recommended starting point for manual testers. Learn the Record-Refine-Review workflow from scratch — no prior coding experience required."
-  link="/midnight-automation-voyage/courses/first-playwright-tests"
+  link="/qa-automation-academy/courses/first-playwright-tests"
   :moduleList="[
     'See a Test Do Real Work',
     'Just Enough TypeScript & Tooling',
@@ -44,7 +44,7 @@ import CourseCard from '../.vitepress/theme/components/CourseCard.vue'
   :modules="10"
   status="✅ Complete"
   description="Master the prompt-driven testing workflow. Research-aligned lesson order teaches concepts before tools."
-  link="/midnight-automation-voyage/courses/copilot-first-testing"
+  link="/qa-automation-academy/courses/copilot-first-testing"
   :moduleList="[
     'How Automation Works',
     'Environment Setup',
@@ -69,7 +69,7 @@ These courses draw from the 33-module legacy library. Content is complete but so
   :modules="11"
   status="⚡ Partial narration"
   description="Page objects, API testing, auth fixtures, test data strategies, flaky test diagnosis, CI/CD integration, and prompt engineering templates."
-  link="/midnight-automation-voyage/courses/build-skills"
+  link="/qa-automation-academy/courses/build-skills"
   :moduleList="[
     'Prompt Templates',
     'Reading Results',
@@ -91,7 +91,7 @@ These courses draw from the 33-module legacy library. Content is complete but so
   :modules="11"
   status="⚡ Partial"
   description="Advanced topics — trace viewer, mobile testing, parallel execution, multi-browser, GitHub Actions CI/CD, component testing, and custom reporters."
-  link="/midnight-automation-voyage/courses/go-pro"
+  link="/qa-automation-academy/courses/go-pro"
   :moduleList="[
     'Trace Viewer',
     'Mobile & Responsive',

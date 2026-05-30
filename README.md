@@ -1,15 +1,18 @@
 # Midnight Automation Voyage
 
+*The `qa-automation-academy` repository — "Midnight Automation Voyage" is the product/curriculum name.*
+
 **Playwright + GitHub Copilot training platform** — Interactive courses teaching manual testers to write automated tests. Built for QA engineers who know how to test but are new to code.
 
-[![Documentation](https://img.shields.io/badge/docs-live-brightgreen)](https://tafreeman.github.io/midnight-automation-voyage/)
+[![CI](https://github.com/tafreeman/qa-automation-academy/actions/workflows/ci.yml/badge.svg)](https://github.com/tafreeman/qa-automation-academy/actions/workflows/ci.yml)
+[![Documentation](https://img.shields.io/badge/docs-live-brightgreen)](https://tafreeman.github.io/qa-automation-academy/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/node-18%2B-brightgreen.svg)](https://nodejs.org/)
 [![Playwright](https://img.shields.io/badge/playwright-1.58%2B-45ba4b.svg)](https://playwright.dev/)
 [![TypeScript strict](https://img.shields.io/badge/TypeScript-strict-blue.svg)](packages/shared-config)
-[![Modules](https://img.shields.io/badge/modules-55%2B-purple.svg)](https://tafreeman.github.io/midnight-automation-voyage/courses/)
+[![Modules](https://img.shields.io/badge/modules-55%2B-purple.svg)](https://tafreeman.github.io/qa-automation-academy/courses/)
 
-[**Documentation**](https://tafreeman.github.io/midnight-automation-voyage/) • [**Getting Started**](https://tafreeman.github.io/midnight-automation-voyage/guide/getting-started) • [**Courses**](https://tafreeman.github.io/midnight-automation-voyage/courses/) • [**Contributing**](https://tafreeman.github.io/midnight-automation-voyage/reference/contributing)
+[**Documentation**](https://tafreeman.github.io/qa-automation-academy/) • [**Getting Started**](https://tafreeman.github.io/qa-automation-academy/guide/getting-started) • [**Courses**](https://tafreeman.github.io/qa-automation-academy/courses/) • [**Contributing**](https://tafreeman.github.io/qa-automation-academy/reference/contributing)
 
 ---
 
@@ -38,7 +41,7 @@ Open <http://localhost:5174> and pick a course.
 ## What's Here
 
 ```text
-midnight-automation-voyage/
+qa-automation-academy/
 ├── training-app/           ← Interactive learning platform (React + Vite)
 │   └── src/data/
 │       ├── courses/        ← Standalone course modules (2 courses, 22 modules)
@@ -69,16 +72,16 @@ midnight-automation-voyage/
 
 | Course | Modules | Level | Time | Status |
 | --- | --- | --- | --- | --- |
-| [**First Playwright Tests**](https://tafreeman.github.io/midnight-automation-voyage/courses/first-playwright-tests) | 12 | Beginner | ~3 hrs | ✅ Complete |
-| [**Copilot-First Testing**](https://tafreeman.github.io/midnight-automation-voyage/courses/copilot-first-testing) | 10 | Intermediate | ~3 hrs | ✅ Complete |
+| [**First Playwright Tests**](https://tafreeman.github.io/qa-automation-academy/courses/first-playwright-tests) | 12 | Beginner | ~3 hrs | ✅ Complete |
+| [**Copilot-First Testing**](https://tafreeman.github.io/qa-automation-academy/courses/copilot-first-testing) | 10 | Intermediate | ~3 hrs | ✅ Complete |
 
 ### Legacy Curriculum (4 Tiers, 33 Modules)
 
 | Tier | Modules | Level | Time | Status |
 | --- | --- | --- | --- | --- |
-| [**Get Testing**](https://tafreeman.github.io/midnight-automation-voyage/courses/) | 01-10 | Beginner | ~2 hrs | ✅ Complete |
-| [**Build Skills**](https://tafreeman.github.io/midnight-automation-voyage/courses/build-skills) | 11-21 | Intermediate | ~2 hrs | ⚡ Partial narration |
-| [**Go Pro**](https://tafreeman.github.io/midnight-automation-voyage/courses/go-pro) | 22-33 | Advanced | ~2 hrs | ⚡ Partial |
+| [**Get Testing**](https://tafreeman.github.io/qa-automation-academy/courses/) | 01-10 | Beginner | ~2 hrs | ✅ Complete |
+| [**Build Skills**](https://tafreeman.github.io/qa-automation-academy/courses/build-skills) | 11-21 | Intermediate | ~2 hrs | ⚡ Partial narration |
+| [**Go Pro**](https://tafreeman.github.io/qa-automation-academy/courses/go-pro) | 22-33 | Advanced | ~2 hrs | ⚡ Partial |
 
 ## Learning Path
 
@@ -113,7 +116,7 @@ All exercises target this app. **9 pages, 12 routes, intentional bugs** — desi
 | `admin@test.com` | `AdminPass1!` | Admin | Admin panel |
 | `locktest@test.com` | `LockPass123!` | Viewer | Lockout testing |
 
-[**Full Practice App Reference →**](https://tafreeman.github.io/midnight-automation-voyage/guide/practice-app)
+[**Full Practice App Reference →**](https://tafreeman.github.io/qa-automation-academy/guide/practice-app)
 
 ## Standalone Build
 
@@ -169,17 +172,17 @@ Uses pnpm with `pnpm-lock.yaml`. Practice app on `:5173`, training app on `:5174
 
 ## Documentation
 
-📖 **Full documentation:** <https://tafreeman.github.io/midnight-automation-voyage/>
+📖 **Full documentation:** <https://tafreeman.github.io/qa-automation-academy/>
 
 | Resource | Description |
 |----------|-------------|
-| [**Getting Started**](https://tafreeman.github.io/midnight-automation-voyage/guide/getting-started) | Installation and setup guide |
-| [**Course Catalog**](https://tafreeman.github.io/midnight-automation-voyage/courses/) | Browse all courses and modules |
-| [**Practice App Reference**](https://tafreeman.github.io/midnight-automation-voyage/guide/practice-app) | Detailed page-by-page guide with test IDs |
-| [**Architecture**](https://tafreeman.github.io/midnight-automation-voyage/reference/architecture) | Technical architecture and ADRs |
-| [**Test Cases Reference**](https://tafreeman.github.io/midnight-automation-voyage/reference/test-cases) | 59 reference tests explained |
-| [**Contributing**](https://tafreeman.github.io/midnight-automation-voyage/reference/contributing) | How to contribute |
-| [**Changelog**](https://tafreeman.github.io/midnight-automation-voyage/reference/changelog) | Version history and roadmap |
+| [**Getting Started**](https://tafreeman.github.io/qa-automation-academy/guide/getting-started) | Installation and setup guide |
+| [**Course Catalog**](https://tafreeman.github.io/qa-automation-academy/courses/) | Browse all courses and modules |
+| [**Practice App Reference**](https://tafreeman.github.io/qa-automation-academy/guide/practice-app) | Detailed page-by-page guide with test IDs |
+| [**Architecture**](https://tafreeman.github.io/qa-automation-academy/reference/architecture) | Technical architecture and ADRs |
+| [**Test Cases Reference**](https://tafreeman.github.io/qa-automation-academy/reference/test-cases) | 59 reference tests explained |
+| [**Contributing**](https://tafreeman.github.io/qa-automation-academy/reference/contributing) | How to contribute |
+| [**Changelog**](https://tafreeman.github.io/qa-automation-academy/reference/changelog) | Version history and roadmap |
 
 ### Repository Documentation
 
@@ -211,12 +214,16 @@ Honest status of what's next — see [ROADMAP.md](ROADMAP.md) for the full backl
 
 ## Contributing
 
-We welcome contributions! See our [Contributing Guide](https://tafreeman.github.io/midnight-automation-voyage/reference/contributing) for:
+We welcome contributions! See our [Contributing Guide](https://tafreeman.github.io/qa-automation-academy/reference/contributing) for:
 
 - How to report bugs and suggest features
 - Development setup instructions
 - Code style guidelines
 - Pull request process
+
+## Built with AI assistance
+
+This platform — its curriculum, apps, and reference tests — was built with AI-assisted development (LLM coding assistants and GitHub Copilot) under human review. Every change passes the same lint, type-check, and test gates regardless of how it was produced. The Copilot workflow is also part of the subject matter the course teaches.
 
 ## License
 

@@ -20,4 +20,12 @@ practice-app/playwright-report/index.html
 # Local AI / MCP config
 .claude/
 AGENTS.md
+CLAUDE.md
 .mcp.json
+
+# Internal AI-authoring / analysis artifacts (not part of the published curriculum)
+docs/_analysis/
+docs/superpowers/
+
+# Dev-server error dumps
+*.err

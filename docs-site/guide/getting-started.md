@@ -7,8 +7,8 @@ Get the training platform running in under 5 minutes.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/tafreeman/midnight-automation-voyage.git
-cd midnight-automation-voyage
+git clone https://github.com/tafreeman/qa-automation-academy.git
+cd qa-automation-academy
 ```
 
 ### 2. Install Dependencies
@@ -66,7 +66,7 @@ Begin with **First Playwright Tests** — it's the beginner onramp that takes yo
 ## Repository Structure
 
 ```text
-midnight-automation-voyage/
+qa-automation-academy/
 ├── training-app/           ← Interactive learning platform (React + Vite)
 │   └── src/data/
 │       ├── courses/        ← Standalone course modules (2 courses, 22 modules)

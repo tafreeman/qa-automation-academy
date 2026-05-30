@@ -6,7 +6,7 @@ Thank you for your interest in contributing to Midnight Automation Voyage! This 
 
 ### 1. Report Bugs or Issues
 
-Found a problem? Please [open an issue](https://github.com/tafreeman/midnight-automation-voyage/issues) with:
+Found a problem? Please [open an issue](https://github.com/tafreeman/qa-automation-academy/issues) with:
 
 - Clear description of the problem
 - Steps to reproduce
@@ -47,8 +47,8 @@ Before contributing code, ensure you have:
 1. **Fork and clone the repository:**
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/midnight-automation-voyage.git
-cd midnight-automation-voyage
+git clone https://github.com/YOUR-USERNAME/qa-automation-academy.git
+cd qa-automation-academy
 ```
 
 2. **Install dependencies:**
@@ -458,8 +458,8 @@ docs(getting-started): add Windows-specific instructions
 
 ## Questions?
 
-- **General questions:** [Open a discussion](https://github.com/tafreeman/midnight-automation-voyage/discussions)
-- **Bug reports:** [Open an issue](https://github.com/tafreeman/midnight-automation-voyage/issues)
+- **General questions:** [Open a discussion](https://github.com/tafreeman/qa-automation-academy/discussions)
+- **Bug reports:** [Open an issue](https://github.com/tafreeman/qa-automation-academy/issues)
 - **Security issues:** See [Security Policy](./security.md)
 
 ## License
