@@ -30,8 +30,8 @@
 
 **Approved:**
 - GitHub Copilot — Primary dev tool. Autocomplete, inline chat, planning mode, agent mode, sub-agents.
-- Sidekick — General-purpose AI assistant. Custom Skills development.
-- M365 Copilot — Full Office suite.
+- Enterprise AI Assistant — general-purpose AI assistant. Custom Skills development.
+- Office Productivity AI — full office suite (documents, presentations, spreadsheets, email).
 - VS Code — Primary IDE. Planning mode, agent mode, sub-agent orchestration, MCP server integration.
 - Visual Studio — .NET / Razor Pages development.
 
@@ -64,7 +64,7 @@
 **Three Pillars:**
 1. **Context Engineering** — Curate what the model sees. Use system prompts and project instructions. Manage context window budget. Build reusable context packs.
 2. **Prompt Engineering** — Standardized templates. Version-control prompts alongside code. Use structured output formats. Iterate like code: test, measure, refine.
-3. **Tool & Skill Dev** — Build MCP servers. Create custom Sidekick Skills. Develop reusable tool chains.
+3. **Tool & Skill Dev** — Build MCP servers. Create custom assistant Skills. Develop reusable tool chains.
 
 ---
 
