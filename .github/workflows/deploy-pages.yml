@@ -6,6 +6,7 @@ on:
     paths:
       - "practice-app/**"
       - "docs-site/**"
+      - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
 permissions:
@@ -39,11 +40,15 @@ jobs:
       - name: Build docs site
         run: cd docs-site && pnpm build
 
+      # Docs site (VitePress) is the primary front door — served at the Pages
+      # root so the README's documentation links resolve. The practice app
+      # (single-file build, HashRouter) is served under /app.
       - name: Combine artifacts
         run: |
           mkdir -p _site
-          cp -r practice-app/dist/* _site/
-          cp -r docs-site/dist _site/docs
+          cp -r docs-site/dist/. _site/
+          mkdir -p _site/app
+          cp -r practice-app/dist/. _site/app/
 
       - uses: actions/upload-pages-artifact@v3
         with:

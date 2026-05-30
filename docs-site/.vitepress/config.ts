@@ -9,8 +9,9 @@ export default defineConfig({
   description:
     "Playwright + GitHub Copilot training platform — interactive courses teaching manual testers to write automated tests.",
 
-  /* Relative base — works regardless of deployment path */
-  base: "./",
+  /* Absolute base — docs are served at the root of the project Pages site
+     (https://tafreeman.github.io/qa-automation-academy/). */
+  base: "/qa-automation-academy/",
 
   /* Build output directory — VitePress defaults to .vitepress/dist */
   outDir: "dist",

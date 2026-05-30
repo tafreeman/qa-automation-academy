@@ -29,3 +29,7 @@ docs/superpowers/
 
 # Dev-server error dumps
 *.err
+
+# npm/yarn lockfiles — this is a pnpm-only repo (source of truth: pnpm-lock.yaml)
+package-lock.json
+yarn.lock

@@ -29,12 +29,6 @@ Comprehensive reference for the Copilot-first testing approach:
 |----------|-------------|
 | [copilot-playwright-knowledge-base.md](copilot-playwright-knowledge-base.md) | Playwright + Copilot knowledge base |
 
-## Analysis
-
-| Document | Description |
-|----------|-------------|
-| [analysis05022026.md](analysis05022026.md) | Current portfolio analysis (May 2026) |
-
 ## See Also
 
 - [Root README](../README.md) — Quick start and project overview

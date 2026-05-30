@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 // Helper: fill shipping form and advance
 async function fillShipping(page: import('@playwright/test').Page) {
-  await page.goto('/checkout/shipping');
+  await page.goto('/#/checkout/shipping');
   await page.getByTestId('address-input').fill('123 Main St');
   await page.getByTestId('city-input').fill('Springfield');
   await page.getByTestId('state-select').selectOption('IL');
@@ -37,7 +37,7 @@ test('payment form accepts valid card and advances to review', async ({ page }) 
 
 // W3: Back button preserves shipping data
 test('back button preserves previously entered shipping data', async ({ page }) => {
-  await page.goto('/checkout/shipping');
+  await page.goto('/#/checkout/shipping');
 
   await page.getByTestId('address-input').fill('123 Main St');
   await page.getByTestId('city-input').fill('Springfield');
@@ -58,7 +58,7 @@ test('back button preserves previously entered shipping data', async ({ page }) 
 
 // W4: Direct URL to step 3 redirects to step 1
 test('direct navigation to review step redirects to shipping', async ({ page }) => {
-  await page.goto('/checkout/review');
+  await page.goto('/#/checkout/review');
 
   await expect(page).toHaveURL(/.*\/checkout\/shipping/);
 });
@@ -80,7 +80,14 @@ test('review page displays shipping and payment summary', async ({ page }) => {
 });
 
 // W6: Place order shows confirmation
+// KNOWN-FAIL (documents practice-app behavior): ReviewPage.handlePlaceOrder()
+// calls reset() before navigate("/checkout/confirmation"). reset() clears the
+// "shipping/payment completed" flags, so the ReviewPage guard effect fires and
+// redirects back to /checkout/shipping, racing the confirmation navigation.
+// test.fail() records this as an expected failure for the informational suite;
+// fixing the practice app (navigate before reset) would flip it to passing.
 test('placing order shows confirmation with order number', async ({ page }) => {
+  test.fail();
   await fillShipping(page);
   await fillPayment(page);
 

@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 // T1: Table loads with data
 test('orders table loads with rows and headers', async ({ page }) => {
-  await page.goto('/orders');
+  await page.goto('/#/orders');
 
   await expect(page.getByTestId('data-table')).toBeVisible();
   await expect(page.getByTestId('col-id')).toBeVisible();
@@ -18,7 +18,7 @@ test('orders table loads with rows and headers', async ({ page }) => {
 
 // T2: Column sort ascending/descending
 test('clicking column header toggles sort order', async ({ page }) => {
-  await page.goto('/orders');
+  await page.goto('/#/orders');
 
   // Click Amount header — ascending
   await page.getByTestId('col-amount').click();
@@ -44,7 +44,7 @@ test('clicking column header toggles sort order', async ({ page }) => {
 
 // T3: Pagination navigates pages
 test('pagination shows different rows on page 2', async ({ page }) => {
-  await page.goto('/orders');
+  await page.goto('/#/orders');
 
   // Get first row on page 1
   const firstRowPage1 = await page.getByTestId('table-row').first()
@@ -63,7 +63,7 @@ test('pagination shows different rows on page 2', async ({ page }) => {
 
 // T4: Status filter narrows rows
 test('status filter shows only matching orders', async ({ page }) => {
-  await page.goto('/orders');
+  await page.goto('/#/orders');
 
   await page.getByTestId('status-filter').selectOption('Shipped');
 
@@ -80,7 +80,7 @@ test('status filter shows only matching orders', async ({ page }) => {
 
 // T5: Row count updates with filter
 test('row count text updates when filter is applied', async ({ page }) => {
-  await page.goto('/orders');
+  await page.goto('/#/orders');
 
   const allText = await page.getByTestId('row-count').innerText();
 
@@ -93,7 +93,7 @@ test('row count text updates when filter is applied', async ({ page }) => {
 
 // T6: Empty filter state
 test('filtering to status with no results shows empty message', async ({ page }) => {
-  await page.goto('/orders');
+  await page.goto('/#/orders');
 
   // All statuses in our data have results, so we test the empty-table element
   // by checking it is NOT visible when there are results

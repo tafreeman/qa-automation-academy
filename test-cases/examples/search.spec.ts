@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 // S1: Search page loads with default products
 test('search page loads with default products visible', async ({ page }) => {
-  await page.goto('/products');
+  await page.goto('/#/products');
 
   await expect(page.getByTestId('search-input')).toBeVisible();
   await expect(page.getByTestId('search-button')).toBeVisible();
@@ -15,7 +15,7 @@ test('search page loads with default products visible', async ({ page }) => {
 
 // S2: Valid search returns matching results with complete cards
 test('search for Widget returns matching results with complete cards', async ({ page }) => {
-  await page.goto('/products');
+  await page.goto('/#/products');
 
   await page.getByTestId('search-input').fill('Widget');
   await page.getByTestId('search-button').click();
@@ -35,7 +35,7 @@ test('search for Widget returns matching results with complete cards', async ({ 
 
 // S3: Search is case-insensitive
 test('search is case-insensitive', async ({ page }) => {
-  await page.goto('/products');
+  await page.goto('/#/products');
 
   const searchTerms = ['Widget', 'widget', 'WIDGET'];
   const counts: number[] = [];
@@ -55,7 +55,7 @@ test('search is case-insensitive', async ({ page }) => {
 
 // S4: No-match search shows empty state
 test('nonexistent search term shows empty state', async ({ page }) => {
-  await page.goto('/products');
+  await page.goto('/#/products');
 
   await page.getByTestId('search-input').fill('xyznonexistent');
   await page.getByTestId('search-button').click();
@@ -68,7 +68,7 @@ test('nonexistent search term shows empty state', async ({ page }) => {
 
 // S5: Category filter narrows search results
 test('category filter narrows search results', async ({ page }) => {
-  await page.goto('/products');
+  await page.goto('/#/products');
 
   await page.getByTestId('search-input').fill('Widget');
   await page.getByTestId('search-button').click();
@@ -85,7 +85,7 @@ test('category filter narrows search results', async ({ page }) => {
 
 // S6: Empty search resets to show all products
 test('empty search resets to show all products', async ({ page }) => {
-  await page.goto('/products');
+  await page.goto('/#/products');
 
   await expect(page.getByTestId('result-card').first()).toBeVisible();
   const defaultCount = await page.getByTestId('result-card').count();
@@ -102,7 +102,7 @@ test('empty search resets to show all products', async ({ page }) => {
 
 // S7: Enter key triggers search
 test('Enter key triggers search', async ({ page }) => {
-  await page.goto('/products');
+  await page.goto('/#/products');
 
   await page.getByTestId('search-input').fill('Widget');
   await page.getByTestId('search-input').press('Enter');

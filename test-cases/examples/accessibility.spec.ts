@@ -4,7 +4,7 @@ import { test, expect } from '@playwright/test';
 
 // AX1: Settings page has keyboard-navigable tabs
 test('settings tabs are keyboard navigable', async ({ page }) => {
-  await page.goto('/settings');
+  await page.goto('/#/settings');
 
   const profileTab = page.getByTestId('settings-profile-tab');
   const securityTab = page.getByTestId('settings-security-tab');
@@ -22,7 +22,7 @@ test('settings tabs are keyboard navigable', async ({ page }) => {
 
 // AX2: Tab panels have correct ARIA attributes
 test('tab panels use correct ARIA roles', async ({ page }) => {
-  await page.goto('/settings');
+  await page.goto('/#/settings');
 
   // Profile tab is selected by default
   await expect(page.getByTestId('settings-profile-tab')).toHaveAttribute('aria-selected', 'true');
@@ -35,7 +35,7 @@ test('tab panels use correct ARIA roles', async ({ page }) => {
 
 // AX3: Confirm dialog has alertdialog role
 test('delete account dialog has correct ARIA role', async ({ page }) => {
-  await page.goto('/settings');
+  await page.goto('/#/settings');
   await page.getByTestId('settings-security-tab').click();
 
   // Click delete account button
@@ -51,7 +51,7 @@ test('delete account dialog has correct ARIA role', async ({ page }) => {
 
 // AX4: Form inputs have associated labels
 test('profile form inputs have visible labels', async ({ page }) => {
-  await page.goto('/settings');
+  await page.goto('/#/settings');
 
   // Name and email inputs have labels
   await expect(page.locator('label[for="settings-name"]')).toBeVisible();

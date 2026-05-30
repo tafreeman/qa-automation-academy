@@ -11,7 +11,7 @@
 [![Playwright](https://img.shields.io/badge/playwright-1.58%2B-45ba4b.svg)](https://playwright.dev/)
 [![TypeScript strict](https://img.shields.io/badge/TypeScript-strict-blue.svg)](packages/shared-config)
 [![Modules](https://img.shields.io/badge/modules-53-purple.svg)](https://tafreeman.github.io/qa-automation-academy/courses/)
-[![Reference Tests](https://img.shields.io/badge/reference%20tests-59-brightgreen.svg)](test-cases/examples/)
+[![Reference Specs](https://img.shields.io/badge/reference%20specs-59-blue.svg)](test-cases/examples/)
 
 [**Documentation**](https://tafreeman.github.io/qa-automation-academy/) • [**Getting Started**](https://tafreeman.github.io/qa-automation-academy/guide/getting-started) • [**Courses**](https://tafreeman.github.io/qa-automation-academy/courses/) • [**Contributing**](https://tafreeman.github.io/qa-automation-academy/reference/contributing)
 
@@ -45,7 +45,7 @@ Open <http://localhost:5174> and pick a course.
 qa-automation-academy/
 ├── training-app/           ← Interactive learning platform (React + Vite)
 │   └── src/data/
-│       ├── courses/        ← Standalone course modules (2 courses, 22 modules)
+│       ├── courses/        ← Standalone course modules (2 courses, 20 modules)
 │       └── modules/        ← Legacy module library (33 modules)
 ├── practice-app/           ← Test target app (9 pages, 12 routes, intentional bugs)
 ├── packages/shared-config/ ← Shared TypeScript, PostCSS, Tailwind config
@@ -62,7 +62,7 @@ qa-automation-academy/
 |---------|-------------|
 | 🎭 **Real Playwright Tests** | 59 reference tests included — no mock data, no external dependencies |
 | 🤖 **Copilot-First Workflow** | Master AI-assisted testing from day one with prompt templates |
-| 📚 **55+ Interactive Modules** | Two standalone courses (22 modules) + legacy curriculum (33 modules) |
+| 📚 **53 Interactive Modules** | Two standalone courses (20 modules) + legacy curriculum (33 modules) |
 | 🧪 **Practice App Included** | 9 pages with intentional bugs, `data-testid` attributes throughout |
 | 🎯 **Quizzes & Exercises** | Knowledge checks and hands-on coding in every module |
 | 🚀 **Zero to CI/CD** | From first locator to GitHub Actions with parallel sharding |
@@ -73,10 +73,10 @@ qa-automation-academy/
 
 | Course | Modules | Level | Time | Status |
 | --- | --- | --- | --- | --- |
-| [**First Playwright Tests**](https://tafreeman.github.io/qa-automation-academy/courses/first-playwright-tests) | 12 | Beginner | ~3 hrs | ✅ Complete |
+| [**First Playwright Tests**](https://tafreeman.github.io/qa-automation-academy/courses/first-playwright-tests) | 10 | Beginner | ~3 hrs | ✅ Complete |
 | [**Copilot-First Testing**](https://tafreeman.github.io/qa-automation-academy/courses/copilot-first-testing) | 10 | Intermediate | ~3 hrs | ✅ Complete |
 
-### Legacy Curriculum (4 Tiers, 33 Modules)
+### Legacy Curriculum (3 Tiers, 33 Modules)
 
 | Tier | Modules | Level | Time | Status |
 | --- | --- | --- | --- | --- |

@@ -2,7 +2,10 @@ import { test, expect } from '@playwright/test';
 
 // AF1: Activity feed loads with data in normal mode
 test('activity feed loads and displays activity rows', async ({ page }) => {
-  await page.goto('/activity');
+  // waitUntil: 'commit' resolves before the app's JS runs, so the assertion
+  // below starts polling in time to catch the transient (~600ms) loading
+  // skeleton. With the default 'load' wait the skeleton can disappear first.
+  await page.goto('/#/activity', { waitUntil: 'commit' });
 
   // Loading skeleton should appear first
   await expect(page.getByTestId('activity-loading')).toBeVisible();
@@ -14,7 +17,7 @@ test('activity feed loads and displays activity rows', async ({ page }) => {
 
 // AF2: Filter chips narrow the activity list
 test('filter chips narrow activity list by type', async ({ page }) => {
-  await page.goto('/activity');
+  await page.goto('/#/activity');
   await expect(page.getByTestId('activity-list')).toBeVisible({ timeout: 5000 });
 
   await page.getByTestId('activity-filter-login').click();
@@ -27,7 +30,7 @@ test('filter chips narrow activity list by type', async ({ page }) => {
 
 // AF3: Error mode shows error state
 test('error mode displays error message with retry button', async ({ page }) => {
-  await page.goto('/activity');
+  await page.goto('/#/activity');
   await expect(page.getByTestId('activity-list')).toBeVisible({ timeout: 5000 });
 
   await page.getByTestId('activity-mode-error').click();
@@ -39,7 +42,7 @@ test('error mode displays error message with retry button', async ({ page }) => 
 
 // AF4: Empty mode shows empty state
 test('empty mode shows no activity message', async ({ page }) => {
-  await page.goto('/activity');
+  await page.goto('/#/activity');
   await expect(page.getByTestId('activity-list')).toBeVisible({ timeout: 5000 });
 
   await page.getByTestId('activity-mode-empty').click();
@@ -51,7 +54,7 @@ test('empty mode shows no activity message', async ({ page }) => {
 
 // AF5: Clicking a row opens detail drawer
 test('clicking activity row opens detail drawer', async ({ page }) => {
-  await page.goto('/activity');
+  await page.goto('/#/activity');
   await expect(page.getByTestId('activity-list')).toBeVisible({ timeout: 5000 });
 
   await page.getByTestId('activity-row-act-2').click();

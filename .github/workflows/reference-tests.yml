@@ -1,0 +1,45 @@
+name: Reference Tests (informational)
+
+# Runs the 59 curriculum "gold standard" specs in test-cases/examples/ against
+# the practice app and publishes the Playwright HTML report as an artifact.
+#
+# This is an INFORMATIONAL suite, not a required gate. A subset of specs
+# intentionally exercises the practice app's built-in bugs (the curriculum's
+# "find the bug by testing" goal), so some are expected to fail by design until
+# they are fixed or annotated with test.fail(). It runs weekly and on demand so
+# maintainers can see the current pass/fail picture without blocking PRs.
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: reference-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  reference-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Install Playwright browsers
+        run: cd practice-app && pnpm exec playwright install --with-deps chromium
+      - name: Run reference tests (informational)
+        run: cd practice-app && pnpm exec playwright test --config playwright.config.reference.ts
+      - name: Upload reference test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reference-report
+          path: practice-app/playwright-report/
+          retention-days: 14

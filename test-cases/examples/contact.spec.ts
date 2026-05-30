@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 // F1: Contact form loads with all fields visible
 test('contact form loads with all fields visible', async ({ page }) => {
-  await page.goto('/contact');
+  await page.goto('/#/contact');
 
   await expect(page.getByTestId('name-input')).toBeVisible();
   await expect(page.getByTestId('contact-email-input')).toBeVisible();
@@ -14,7 +14,7 @@ test('contact form loads with all fields visible', async ({ page }) => {
 
 // F2: Empty submit shows all required field errors (not phone)
 test('empty submission shows errors for all required fields', async ({ page }) => {
-  await page.goto('/contact');
+  await page.goto('/#/contact');
 
   await page.getByTestId('submit-button').click();
 
@@ -29,7 +29,7 @@ test('empty submission shows errors for all required fields', async ({ page }) =
 
 // F3: Name minimum length validation
 test('short name shows minimum length error', async ({ page }) => {
-  await page.goto('/contact');
+  await page.goto('/#/contact');
 
   await page.getByTestId('name-input').fill('A');
   await page.getByTestId('contact-email-input').fill('test@example.com');
@@ -43,7 +43,7 @@ test('short name shows minimum length error', async ({ page }) => {
 
 // F4: Email format validation
 test('invalid email format shows validation error', async ({ page }) => {
-  await page.goto('/contact');
+  await page.goto('/#/contact');
 
   await page.getByTestId('name-input').fill('Test User');
   await page.getByTestId('contact-email-input').fill('bad-format');
@@ -57,7 +57,7 @@ test('invalid email format shows validation error', async ({ page }) => {
 
 // F5: Phone format validation (optional field)
 test('invalid phone format shows format error', async ({ page }) => {
-  await page.goto('/contact');
+  await page.goto('/#/contact');
 
   await page.getByTestId('name-input').fill('Test User');
   await page.getByTestId('contact-email-input').fill('test@example.com');
@@ -72,7 +72,7 @@ test('invalid phone format shows format error', async ({ page }) => {
 
 // F6: Message minimum length validation
 test('short message shows minimum length error', async ({ page }) => {
-  await page.goto('/contact');
+  await page.goto('/#/contact');
 
   await page.getByTestId('name-input').fill('Test User');
   await page.getByTestId('contact-email-input').fill('test@example.com');
@@ -86,7 +86,7 @@ test('short message shows minimum length error', async ({ page }) => {
 
 // F7: Happy path — successful submission clears form
 test('valid form submission shows success and clears fields', async ({ page }) => {
-  await page.goto('/contact');
+  await page.goto('/#/contact');
 
   await page.getByTestId('name-input').fill('Test User');
   await page.getByTestId('contact-email-input').fill('test@example.com');

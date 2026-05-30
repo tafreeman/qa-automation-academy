@@ -7,19 +7,19 @@
  * so the two suites can be run and reported independently.
  *
  * Run locally:   cd practice-app && pnpm exec playwright test --config playwright.config.reference.ts
- * CI:            uses the "reference-tests" job in .github/workflows/ci.yml
+ * CI:            .github/workflows/reference-tests.yml (scheduled + on-demand, informational)
  */
 
 import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
   testDir: "../test-cases/examples",
-  fullyParallel: false,
-  retries: process.env.CI ? 2 : 0,
+  fullyParallel: true,
+  retries: 0,
   reporter: [["html", { open: "never" }], ["list"]],
   use: {
     baseURL: process.env.BASE_URL || "http://127.0.0.1:4181",
-    trace: "on-first-retry",
+    trace: "retain-on-failure",
     screenshot: "only-on-failure",
   },
   projects: [
