@@ -10,7 +10,8 @@
 [![Node.js](https://img.shields.io/badge/node-18%2B-brightgreen.svg)](https://nodejs.org/)
 [![Playwright](https://img.shields.io/badge/playwright-1.58%2B-45ba4b.svg)](https://playwright.dev/)
 [![TypeScript strict](https://img.shields.io/badge/TypeScript-strict-blue.svg)](packages/shared-config)
-[![Modules](https://img.shields.io/badge/modules-55%2B-purple.svg)](https://tafreeman.github.io/qa-automation-academy/courses/)
+[![Modules](https://img.shields.io/badge/modules-53-purple.svg)](https://tafreeman.github.io/qa-automation-academy/courses/)
+[![Reference Tests](https://img.shields.io/badge/reference%20tests-59-brightgreen.svg)](test-cases/examples/)
 
 [**Documentation**](https://tafreeman.github.io/qa-automation-academy/) • [**Getting Started**](https://tafreeman.github.io/qa-automation-academy/guide/getting-started) • [**Courses**](https://tafreeman.github.io/qa-automation-academy/courses/) • [**Contributing**](https://tafreeman.github.io/qa-automation-academy/reference/contributing)
 
